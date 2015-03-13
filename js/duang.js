@@ -1,7 +1,3 @@
-function bindButtonClick() {
-	$('input#play-button').click(play);
-}
-
 function play() {
 	var zone = document.getElementById('audio-element');
 	var audio = initAudioElt();
@@ -20,7 +16,3 @@ function initAudioElt() {
 	elt.setAttribute('src', 'audio/duang.mp3');
 	return elt;
 }
-
-$(document).ready(function() {
-	bindButtonClick();
-});
