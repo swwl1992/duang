@@ -1,4 +1,4 @@
-#play-button{
+#l-play-button{
   border: none;
   background: none;
   position: fixed;
@@ -17,7 +17,7 @@
   font-weight: bold;
   cursor: pointer;
 }
-body{
+#l-body{
   background: rgba(105,161,171,1);
   background: -moz-linear-gradient(left, rgba(105,161,171,1) 0%, rgba(247,250,210,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(105,161,171,1)), color-stop(100%, rgba(247,250,210,1)));
@@ -26,4 +26,33 @@ body{
   background: -ms-linear-gradient(left, rgba(105,161,171,1) 0%, rgba(247,250,210,1) 100%);
   background: linear-gradient(to right, rgba(105,161,171,1) 0%, rgba(247,250,210,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69a1ab', endColorstr='#f7fad2', GradientType=1 );
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  -webkit-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out;
+}
+@-webkit-keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;
+}
+}
+@keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;
+}
 }
