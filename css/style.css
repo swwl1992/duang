@@ -27,17 +27,25 @@
   background: linear-gradient(to right, rgba(105,161,171,1) 0%, rgba(247,250,210,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69a1ab', endColorstr='#f7fad2', GradientType=1 );
 }
-
+#button-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 72px;
+  margin-left: -25%;
+  width: 50%;
+  height: 80px;
+  margin-top: -40px;
+  line-height: 80px;
+}
 #play-button {
   position: relative;
   display: block;
-  width: 13em;
-  height: 3em;
-  margin: 2em;
+  width: 100%;
+  height: 100%;
   border: none;
   outline: none;
-  letter-spacing: .2em;
-  font-weight: bold;
+  font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
   background: #ff8a80;
   cursor: pointer;
   overflow: hidden;
@@ -45,7 +53,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 2px;
+  border-radius: 5px;
+  font-family:;
+  color:white;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ripple {
