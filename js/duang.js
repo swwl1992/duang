@@ -1,20 +1,8 @@
-function play() {
-	var zone = document.getElementById('audio-element');
-	var audio = initAudioElt();
-	zone.appendChild(audio);
-	audio.play();
-	// remove audio element when complete
-	setTimeout(function() {
-		zone.removeChild(audio);
-	}, 4000);
-}
+var pop = {};
 
-function initAudioElt() {
-	var elt = document.createElement('audio');
-	elt.setAttribute('preload', 'auto');
-	elt.setAttribute('autoplay', 'autoplay');
-	elt.setAttribute('src', 'audio/duang.mp3');
-	return elt;
+function play() {
+	pop.currentTime(0);
+	pop.play();
 }
 
 var addRippleEffect = function (e) {
@@ -37,4 +25,9 @@ var addRippleEffect = function (e) {
     return false;
 }
 
+// initiate pop object
+document.addEventListener("DOMContentLoaded", function () {
+	pop = Popcorn("#audio-element");
+}, false);
+// initiate ripple effect
 document.addEventListener('click', addRippleEffect, false);
