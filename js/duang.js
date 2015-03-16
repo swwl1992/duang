@@ -19,7 +19,7 @@ function initAudioElt() {
 
 var addRippleEffect = function (e) {
     var target = e.target;
-    if (target.tagName.toLowerCase() !== 'input') return false;
+    if (target.tagName.toLowerCase() !== 'button') return false;
     var rect = target.getBoundingClientRect();
     var ripple = target.querySelector('.ripple');
     if (!ripple) {
