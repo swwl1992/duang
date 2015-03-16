@@ -28,6 +28,26 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69a1ab', endColorstr='#f7fad2', GradientType=1 );
 }
 
+#play-button {
+  position: relative;
+  display: block;
+  width: 13em;
+  height: 3em;
+  margin: 2em;
+  border: none;
+  outline: none;
+  letter-spacing: .2em;
+  font-weight: bold;
+  background: #dfdfdf;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 2px;
+}
+
 .ripple {
   position: absolute;
   background: rgba(0,0,0,.25);
